@@ -1,0 +1,307 @@
+
+/* Container de fotos */
+main main h1{
+    background-color: transparent;
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.gallery-container {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.frame {
+    flex: 0 0 calc(20% - 30px); /* Cada imagem ocupa 20% da largura do contêiner menos a margem horizontal */
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 0 15px; 
+    background-color: white;
+    border: 1px solid #ccc;
+    text-align: center;
+    position: relative;
+}
+
+.frame img {
+    width: 100%;
+    height: auto; /* Deixa a altura automática para manter a proporção */
+    border: 1px solid #ccc; 
+    border-radius: 7px; 
+    object-fit: cover;
+    position: relative;
+}
+
+/* Ícone de coração no canto superior direito */
+.favorite-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilizando a informação abaixo do quadro */
+.info {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.arrow:disabled {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}
+
+.info .status {
+    font-weight: bold;
+    color: red; /* ou outra cor de sua escolha */
+}
+
+/*Container de fotos 2*/
+
+main footer h1 {
+    background-color: transparent;
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.gallery-container2 {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.gallery2 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.frame2 {
+    flex: 0 0 calc(20% - 30px); /* Cada imagem ocupa 20% da largura do contêiner menos a margem horizontal */
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 0 15px; 
+    background-color: white;
+    border: 1px solid #ccc;
+    text-align: center;
+    position: relative;
+}
+
+.frame2 img {
+    width: 100%;
+    height: auto; /* Deixar a altura automática para manter a proporção */
+    border: 1px solid #ccc; 
+    border-radius: 7px; 
+    object-fit: cover;
+    position: relative;
+}
+
+/* Ícone de coração no canto superior direito */
+.favorite-icon2 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilizando a informação abaixo do quadro */
+.info2 {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.info2 p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.arrow2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow2 {
+    left: 10px;
+}
+
+.right-arrow2 {
+    right: 10px;
+}
+
+.arrow2:disabled {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}
+
+.info2 .status2 {
+    font-weight: bold;
+    color: red; /* ou outra cor de sua escolha */
+}
+
+
+/* Conatiner principal, ifo artistas */
+main header{
+ width: 70%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+#top-info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color: white;
+
+   
+}
+
+.chat{
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+   img{
+    width: 26px;
+    padding-left: 6px;
+    padding-top: 2px;
+    border-radius: 5px;
+   }
+}
+
+.chat img, .ellipsis img, .chat, .ellipsis{
+    background-color: #302D2E;
+}
+
+.follow{
+    margin-left: -240px;
+}
+
+.chat{ 
+    margin-left: -240px;
+}
+
+.ellipsis{
+    margin-left: -280px;
+}
+
+.ellipsis{
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+   img{
+    width: 26px;
+    padding-left: 6px;
+    padding-top: 2px;
+    border-radius: 5px;
+   }
+}
+
+.follow{
+    background-color: #302D2E;
+    width: 90px;
+   
+    display: flex;
+    flex-direction: row;
+    
+    border-radius: 5px;
+   
+    p{
+        color: white;
+        background-color: #302D2E;
+    }
+
+    img{
+        padding-left: 2px;
+        border-radius: 5px;
+        background-color: #302D2E;
+        width: 30px;
+    }
+}
+
+article{
+    padding: 20px;
+    background-color: white;
+    align-items: center;
+    height: 60%;
+    width: 90%;
+}
+
+.artist-avatar {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    overflow: hidden; 
+    position: relative; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+}
+
+.artist-avatar img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center center; 
+}
+

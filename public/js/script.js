@@ -12,7 +12,7 @@ form.addEventListener('submit', (event) => {
     console.log(event)
     const nome = event.target.nome.value
     const email = event.target.email.value
-    const senha = event.target.senha.value
+    const senha = event.target.passw.value
 
     
     const dados ={

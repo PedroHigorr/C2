@@ -1,0 +1,26 @@
+{
+  "name": "cadastrousuario",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroHigorr/C2.git"
+  },
+  "author": "Pedro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PedroHigorr/C2/issues"
+  },
+  "homepage": "https://github.com/PedroHigorr/C2#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "mysql2": "^3.9.7",
+    "qs": "^6.12.1",
+    "selenium-webdriver": "^4.21.0"
+  }
+}

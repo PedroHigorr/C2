@@ -13,38 +13,36 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, '../','public')))
 
 app.post('/register', async (req, res) => {
-    console.log(req.body)
-    
-try{
-    await knex('users').insert(
-        req.body
-    )
-    res.status(201).json({mensagem: 'Usuário cadastrado com sucesso!'})
-} catch(err) {res.status(500).json({ mensagem: `${err}`})
-}})
-
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, '../','public', 'register.html'))
-})
-
-app.listen(port, () => {
-    console.log(`Servidor executando na porta ${port}`)
-})
+    console.log(req.body);
+    try {
+        await knex('users').insert(req.body);
+        res.status(201).json({ mensagem: 'Usuário cadastrado com sucesso!' });
+    } catch (err) {
+        res.status(500).json({ mensagem: `${err}` });
+    }
+});
 
 
 app.post('/login', async (req, res) => {
-    const{senha, email} = req.body
-
-    try{
-        await knex('users').select('*').where(email, senha).first()
-        res.status(201).json({ mensagem: 'Usuário autenticado! '})
-    }catch(erro){
-        res.status(erro).json( { mensagem: `${erro}`})
+    const { senha, email } = req.body;
+    try {
+        const user = await knex('users').where({ email, senha }).first();
+        if (user) {
+            res.status(200).json({ mensagem: 'Usuário autenticado!' });
+        } else {
+            res.status(401).json({ mensagem: 'Email ou senha incorretos.' });
+        }
+    } catch (err) {
+        res.status(500).json({ mensagem: `${err}` });
     }
-})
+});
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'register.html'))
+    res.sendFile(path.join(__dirname, '../', 'public', 'login.html'));
+});
+
+app.listen(port, () => {
+    console.log(`Servidor executando na porta ${port}`)
 })
 
 // rota para teste de conexão com o banco de dados

@@ -45,25 +45,3 @@ form.addEventListener('submit', (event) => {
         alert('Erro ao cadastrar usuário')
         })
 })
-
-
-
-//Rota de autenticação de login
-fetch('/login', {
-    method: 'POST',
-    headers: {
-        'Content-Type' : 'application/json'
-    },
-    body: JSON.stringify(dados)
-})
-.then(response => {
-    return response.json().then(data => {
-        if(response.status === 201){
-            alert(data.mensagem);
-        }else{
-            alert(data.mensagem);
-        }
-    })
-}).catch(error => {console.error(error)
-alert('Erro ao cadastrar usr') })
-

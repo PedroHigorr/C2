@@ -1,19 +1,32 @@
-const port = 3006
-const path = require('path')
-const express = require('express')
-const knex = require('./database')
+const port = 3006;
+const path = require('path');
+const express = require('express');
+const multer = require('multer');
+const knex = require('./database');
+const fs = require('fs');
+const app = express();
 
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '../', 'public')));
 
-const app = express()
+// Verifica se a pasta 'uploads' existe, caso contrário, cria a pasta
+const uploadDir = path.join(__dirname, '../', 'public', 'uploads');
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+}
 
-app.use(express.json())
-
-
-
-app.use(express.static(path.join(__dirname, '../','public')))
+// Configuração do Multer para upload de arquivos
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, uploadDir);
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
+const upload = multer({ storage });
 
 app.post('/register', async (req, res) => {
-    console.log(req.body);
     try {
         await knex('users').insert(req.body);
         res.status(201).json({ mensagem: 'Usuário cadastrado com sucesso!' });
@@ -22,9 +35,8 @@ app.post('/register', async (req, res) => {
     }
 });
 
-
 app.post('/login', async (req, res) => {
-    const { senha, email } = req.body;
+    const { email, senha } = req.body;
     try {
         const user = await knex('users').where({ email, senha }).first();
         if (user) {
@@ -37,26 +49,35 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '../', 'public', 'login.html'));
+app.post('/post-art', upload.single('imagem'), async (req, res) => {
+    const { nome_obra, dimensao, descricao, categoria, estilo, tema, data_criacao, preco } = req.body;
+    const user_id = 1; // Substituir pelo ID do usuário logado
+    const caminho_imagem = req.file.path;
+
+    try {
+        await knex('arts').insert({
+            user_id,
+            nome_obra,
+            caminho_imagem,
+            dimensao,
+            descricao,
+            categoria,
+            estilo,
+            tema,
+            data_criacao,
+            preco
+        });
+        res.status(201).json({ mensagem: 'Obra postada com sucesso!' });
+    } catch (err) {
+        res.status(500).json({ mensagem: `${err}` });
+    }
+});
+
+// Rota para servir o arquivo registerWork.html
+app.get('/registerWork', (req, res) => {
+    res.sendFile(path.join(__dirname, '../', 'public', 'registerWork.html'));
 });
 
 app.listen(port, () => {
-    console.log(`Servidor executando na porta ${port}`)
-})
-
-// rota para teste de conexão com o banco de dados
-
-// app.get('/database', async (req, res) => {
-//     try {
-//       await knex.raw('SELECT 1+1 AS result');
-//       res.status(200).json({ mensagem: 'Conexão bem-sucedida!' });
-//     } catch (err) {
-//       console.error(err);
-//       res.status(500).json({ mensagem: 'Erro ao conectar ao banco de dados' });
-//     }
-//   });
-  
-//   app.listen(port, () => {
-//     console.log(`Servidor executando na porta ${port}`);
-//   });
+    console.log(`Servidor executando na porta ${port}`);
+});

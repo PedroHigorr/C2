@@ -401,6 +401,9 @@
         
     }
 
+    /*Incremento para a página "WORK"*/
+
+
     section1 div, a, h5, li, svg{
         background-color: white;                   
     }
@@ -692,7 +695,7 @@ main main h1{
 
 .gallery-container {
     position: relative;
-    width: 80%;
+    width: 90%;
     overflow: hidden;
     margin: auto;
 }
@@ -726,6 +729,7 @@ main main h1{
 /* Ícone de coração no canto superior direito */
 .favorite-icon {
     position: absolute;
+    background-color: transparent;
     top: 5px;
     right: 5px;
     font-size: 20px;
@@ -779,6 +783,9 @@ main main h1{
 }
 
 /*Container de fotos 2*/
+main footer{
+    margin: 60px;
+}
 
 main footer h1 {
     background-color: transparent;
@@ -789,7 +796,7 @@ main footer h1 {
 
 .gallery-container2 {
     position: relative;
-    width: 80%;
+    width: 90%;
     overflow: hidden;
     margin: auto;
 }
@@ -823,6 +830,7 @@ main footer h1 {
 /* Ícone de coração no canto superior direito */
 .favorite-icon2 {
     position: absolute;
+    background-color: transparent;
     top: 5px;
     right: 5px;
     font-size: 20px;
@@ -875,8 +883,105 @@ main footer h1 {
     color: red; /* ou outra cor de sua escolha */
 }
 
+/*incremento da terceira galeria da homepage--------------------------------------------------------*/
 
-/* Conatiner principal, ifo artistas */
+.gallery-container3 h1{
+    background-color: transparent;
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+.gallery-container3 {
+    position: relative;
+    width: 85%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.gallery3 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.frame3 {
+    flex: 0 0 calc(20% - 30px); /* Cada imagem ocupa 20% da largura do contêiner menos a margem horizontal */
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 0 15px; /* Ajuste aqui a margem */
+    background-color: white;
+    border: 1px solid #ccc;
+    text-align: center;
+    position: relative;
+}
+
+.frame3 img {
+    width: 100%;
+    height: auto; /* Deixa a altura automática para manter a proporção */
+    border: 1px solid #ccc; /* Adiciona a borda */
+    border-radius: 7px; /* Adiciona a borda arredondada */
+    object-fit: cover;
+    position: relative;
+}
+
+/* Ícone de coração no canto superior direito */
+.favorite-icon3 {
+    position: absolute;
+    background-color: transparent;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilizando a informação abaixo do quadro */
+.info3 {
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.info3 p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.arrow3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow3 {
+    left: 10px;
+}
+
+.right-arrow3 {
+    right: 10px;
+}
+
+.arrow3:disabled {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}
+
+.info3 .status3 {
+    font-weight: bold;
+    color: red; /* ou outra cor de sua escolha */
+}
+/* fim da terceira galeria da homepage--------------------------------------- */
+
+/* Conatiner principal, info artistas */
 main header{
  width: 70%;
 }
@@ -988,3 +1093,61 @@ article{
     object-position: center center; 
 }
 
+/* incremento 23/06/24 homepage */
+
+#homep {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 60px;
+  }
+  
+  .banner-image {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .banner-image.active {
+    opacity: 1;
+  }    
+
+
+.banner img{
+    width: 80%;
+}
+
+#artists h1{
+    background-color: transparent;
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 130px;
+}
+
+.artist img{
+width: 15%;
+border-radius: 150px;
+}
+
+div.artist {
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}

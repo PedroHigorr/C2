@@ -92,3 +92,7 @@ prevButton2.addEventListener('click', prevSlide2);
 
 // Inicializa o estado dos botões e a exibição do slide
 showSlide2(currentIndex2);
+
+//Script para slider do banner da homepage
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+
+    <title>Document</title>
+    <style>
+        header nav {
+            justify-content: center;
+        }
+        
+        header .container{
+            justify-content: center;           
+        }
+        
+    </style>
+    
+</head>
+<body>
+
+    <header id="head"> 
+        <img class="left-logo" id="Calafate" src="img/calafate-logo.svg" alt="Calafate Logo">
+    </header>
+
+    <main>
+        <form class="container" id="cadastro-form" >
+
+        <div class="input-field">
+            <input required="" name="nome" type="text" id="nome"/>
+            <label for="nome">Nome</label>
+        </div>
+
+        <div class="input-field">
+            <input required="" type="email" name="email" id="email" class="input">
+            <label for="email">Email</label>
+        </div>
+        
+        
+        <div class="input-field" id="pass">   
+            <input required="" type="password" name="senha" id="senha" class="input">
+            <!-- <i class="bi bi-eye-fill" id="btn-pass" onclick="showPass()"></i> -->
+            <label for="senha">Senha</label>
+        </div>
+        
+
+        <p>Ao clicar em "Criar uma conta" ou ao se registrar, você concorda com as <br>
+            Condições de uso e a Política de Privacidade.</p>
+
+        <div id="panel">
+            <button class="btn" type="submit">Criar uma conta</button>
+            <p class="entrar"> Já tem uma conta?</p>
+            <a id="login" href="login.html" class="entrar">Entrar</a>
+        </div>
+    </form>
+</main>
+    <script src="js/showPass.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

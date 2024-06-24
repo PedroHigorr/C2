@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrossel.css">
+    <title>Calafate</title>  
+</head>
+<body>
+    <header>
+        <nav id="head">
+         <img class="left-logo" id="Calafate" src="img/calafate-logo.svg" alt="Calafate Logo">
+         <a id="local" href="address.html">  
+             <img id="localization-logo" src="img/localization-logo.svg" alt="Localization Icon" >
+             <div id="cep"> Informe seu CEP </div></a>
+         <input type="text" name="searchBar" id="searchBar">
+         <img class="art-fav-shop" src="img/artists-logo.svg" alt="Art Market Icon">
+         <img class="art-fav-shop" src="img/fav-logo.svg" alt="Favorite Icon">
+         <img class="art-fav-shop" src="img/market-logo.svg" alt="Market Icon">
+        
+         <div id="perfil">
+             <div id="enter" class="cad-enter"></div>
+             <a id="ent" href="login.html" class="cad-enter">Entrar/</a>
+             <a id="cad" href="register.html" class="cad-enter">Cadastrar</a>
+             <img src="img/perfil-logo.svg" alt="Profile Icon">
+         </div>
+        
+         
+         </nav>
+        
+         <footer>
+             <nav>
+                 <a id="paints" href="pinturas.html">Pinturas</a>
+                 <a href="esculturas.html"> Esculturas</a>
+                 <a href="fotografias.html">Fotografias </a>
+                 <a href="desenhos.htmkl"> Desenhos </a>
+                 <a href="impressoesGravuras.html"> Impressões e Gravuras</a>
+                 <a href="artesDigitais.html"> Artes Digitais</a>
+                 <a href="colagens.html"> Colagens</a>
+                 <a href="textos.html"> Artes Têxtil</a>
+                 <a href="design.html"> Design</a>
+             </nav>
+         </footer>
+ 
+     </header>
+
+     <main>
+        <header>
+            
+            <div>
+               <div class="info">
+                    <div id="top-info">
+                        <div class="artist-avatar">
+                        <img src="https://i.pinimg.com/736x/3f/47/d7/3f47d748e01d5d6af6a184ccf8f8b33a.jpg" alt="Foto do Artista">
+                        </div>
+
+                        <div class="follow">
+                            <img src="img/fav-logo.svg" alt="Follow">
+                            <P>Seguir</P>
+                        </div>
+
+                        <div class="chat">
+                            <img src="img/chat-logo.svg" alt="">                        
+                        </div>
+
+                        <div class="ellipsis">
+                            <img src="img/ellipsis.svg" alt="">
+                        </div>
+
+                        <div class="avaliation">
+                            Avaliação
+                            <img src="" alt="">
+                        </div>
+                    
+                    </div>
+                    <article>
+                        Meu nome é Renata Oliveira e sou uma artista visual brasileira, 
+                        em busca de minha própria voz criativa neste vasto mundo da arte. 
+                        Recebi meu diploma em Belas Artes pela Universidade de São Paulo, 
+                        onde mergulhei fundo na exploração de diferentes técnicas e estilos. 
+                        Minha jornada artística está apenas começando, mas já sinto uma paixão 
+                        ardente por misturar elementos tradicionais com uma perspectiva contemporânea. 
+                        Cada pincelada e cada traço refletem minha curiosidade incessante sobre as 
+                        questões que nos cercam, sejam elas sociais, culturais ou pessoais. Atualmente, 
+                        estou estabelecida em São Paulo, onde me envolvo em projetos comunitários, 
+                        buscando inspiração e colaboração em cada esquina desta cidade vibrante. 
+                        Estou ansiosa para compartilhar minha arte com o mundo e ver aonde essa 
+                        jornada me levará.
+                    </article>
+               </div>
+            </div>
+                
+            
+        </header>
+        <main>
+
+            <div class="gallery-container">
+                <h1>Apresentação das Obras</h1>
+                <button class="arrow left-arrow" onclick="prevSlide()" disabled>&#10094;</button>
+                <div class="gallery">
+                    <!-- estrutura da foto-->
+                    <div class="frame">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 1">
+                        <div class="favorite-icon">❤️</div>
+                        <div class="info">
+                            <p class="name">Nome da Obra</p>
+                            <p class="price">R$ Valor</p>
+                            <p class="status">Vendido</p>
+                        </div>
+                    </div>
+                    <!-- Repita a estrutura acima para cada imagem -->
+                    <div class="frame">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
+                        <div class="favorite-icon">❤️</div>
+                        <div class="info">
+                            <p class="name">Nome da Obra</p>
+                            <p class="price">R$ Valor</p>
+                            <p class="status">Vendido</p>
+                        </div>
+                    </div>
+                    <div class="frame">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 3">
+                        <div class="favorite-icon">❤️</div>
+                        <div class="info">
+                            <p class="name">Nome da Obra</p>
+                            <p class="price">R$ Valor</p>
+                            <p class="status">Vendido</p>
+                        </div>
+                    </div>
+                    <div class="frame">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
+                        <div class="favorite-icon">❤️</div>
+                        <div class="info">
+                            <p class="name">Nome da Obra</p>
+                            <p class="price">R$ Valor</p>
+                            <p class="status">Vendido</p>
+                        </div>
+                    </div>
+                    <div class="frame">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 3">
+                        <div class="favorite-icon">❤️</div>
+                        <div class="info">
+                            <p class="name">Nome da Obra</p>
+                            <p class="price">R$ Valor</p>
+                            <p class="status">Vendido</p>
+                        </div>
+                    </div><div class="frame">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
+                        <div class="favorite-icon">❤️</div>
+                        <div class="info">
+                            <p class="name">Nome da Obra</p>
+                            <p class="price">R$ Valor</p>
+                            <p class="status">Vendido</p>
+                        </div>
+                    </div>
+                    <div class="frame">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 3">
+                        <div class="favorite-icon">❤️</div>
+                        <div class="info">
+                            <p class="name">Nome da Obra</p>
+                            <p class="price">R$ Valor</p>
+                            <p class="status">Vendido</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow right-arrow" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </main>
+        
+        <footer>
+
+            <div class="gallery-container2">
+                <h1>Apresentação das Obras</h1>
+                <button class="arrow2 left-arrow2" onclick="prevSlide2()" disabled>&#10094;</button>
+                <div class="gallery2">
+                    <!-- estrutura da foto-->
+                    <div class="frame2">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 1">
+                        <div class="favorite-icon2">❤️</div>
+                        <div class="info2">
+                            <p class="name2">Nome da Obra</p>
+                            
+                        </div>
+                    </div>
+                    <!-- Repita a estrutura acima para cada imagem -->
+                    <div class="frame2">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
+                        <div class="favorite-icon2">❤️</div>
+                        <div class="info2">
+                            <p class="name2">Nome da Obra</p>
+                    
+                        </div>
+                    </div>
+                    <div class="frame2">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 3">
+                        <div class="favorite-icon2">❤️</div>
+                        <div class="info2">
+                            <p class="name2">Nome da Obra</p>
+                           
+                        </div>
+                    </div>
+                    <div class="frame2">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
+                        <div class="favorite-icon2">❤️</div>
+                        <div class="info2">
+                            <p class="name2">Nome da Obra</p>
+                          
+                        </div>
+                    </div>
+                    <div class="frame2">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 3">
+                        <div class="favorite-icon2">❤️</div>
+                        <div class="info2">
+                            <p class="name2">Nome da Obra</p>
+                            
+                        </div>
+                    </div>
+                    <div class="frame2">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
+                        <div class="favorite-icon2">❤️</div>
+                        <div class="info2">
+                            <p class="name2">Nome da Obra</p>
+                           
+                        </div>
+                    </div>
+                    <div class="frame2">
+                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 3">
+                        <div class="favorite-icon2">❤️</div>
+                        <div class="info2">
+                            <p class="name2">Nome da Obra</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow2 right-arrow2" onclick="nextSlide2()">&#10095;</button>
+            </div>
+            
+        </footer>
+
+     </main>
+
+     <footer>
+
+     </footer>
+
+     <script src="js/slider.js"></script>
+     
+</body>
+</html>

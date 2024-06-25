@@ -5,27 +5,25 @@ document.addEventListener('DOMContentLoaded', function () {
         loginForm.addEventListener('submit', (event) => {
             event.preventDefault();
 
-            const email = event.target.email.value;
-            const senha = event.target.senha.value;
-
-            const dados = { email, senha };
+            const formData = new FormData(loginForm);
+            const loginData = {
+                email: formData.get('email'),
+                senha: formData.get('senha')
+            };
 
             fetch('/login', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(dados)
+                body: JSON.stringify(loginData),
+                headers: { 'Content-Type': 'application/json' }
             })
-            .then(response => {
-                return response.json().then(data => {
-                    if (response.status === 200) {
-                        alert(data.mensagem);
-                        // Redirect to a different page upon successful login if necessary
-                    } else {
-                        alert(data.mensagem);
-                    }
-                });
+            .then(response => response.json().then(data => ({ status: response.status, body: data })))
+            .then(({ status, body }) => {
+                if (status === 200) {
+                    alert(body.mensagem);
+                    window.location.href = body.redirectUrl; // Redireciona para a URL retornada
+                } else {
+                    alert(body.mensagem);
+                }
             })
             .catch(error => {
                 console.error(error);

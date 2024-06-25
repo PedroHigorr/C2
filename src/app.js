@@ -1,3 +1,4 @@
+// NÃO ESQUECER DE ADICIONAR OS COMENTÁRIOS!@!!!@#ER0IJRPOEWUIFOSDFPOI32\
 const port = 3006;
 const path = require('path');
 const express = require('express');

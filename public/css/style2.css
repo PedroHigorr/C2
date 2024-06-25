@@ -684,7 +684,7 @@ div.usrfb{
 
 div.shpp{
     width: 45%;
-<<<<<<< HEAD:style.css
+
 }
 
 /* ----------------------------------------------- */
@@ -939,6 +939,7 @@ main footer h1 {
 }
 
 /* Estilizando a informação abaixo do quadro */
+
 .info3 {
     background-color: #f9f9f9;
     border-top: 1px solid #ccc;
@@ -1154,6 +1155,4 @@ div.artist {
     display: flex;
     justify-content: center;
     gap: 50px;
-=======
->>>>>>> 413ae55096de5a1716029c097df50aff65e8da7c:public/css/style2.css
 }

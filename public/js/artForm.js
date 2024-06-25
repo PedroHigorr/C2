@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
 
             const formData = new FormData(artForm);
+            formData.append('user_id', '<%= userId %>'); //Preencher com o userId da sessão
 
             fetch('/post-art', {
                 method: 'POST',

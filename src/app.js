@@ -1,4 +1,4 @@
-const port = 3006;
+const port = 3003;
 const path = require('path');
 const express = require('express');
 const multer = require('multer');
@@ -76,7 +76,7 @@ function isAuthenticated(req, res, next) {
 
 // Rota para envio de form. de artes (protege a rota)
 app.post('/post-art', isAuthenticated, upload.single('imagem'), async (req, res) => {
-    const { nome_obra, dimensao, descricao, categoria, estilo, tema, data_criacao, preco } = req.body;
+    const { nome_obra, dimensao, descricao, categoria, estilo, tema, data_criacao, preco} = req.body;
     const user_id = req.session.userId; 
 
     const caminho_imagem = req.file.path;

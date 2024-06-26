@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const artForm = document.getElementById('art-form');
-
+    
     if (artForm) {
         artForm.addEventListener('submit', (event) => {
             event.preventDefault();
 
             const formData = new FormData(artForm);
-            formData.append('user_id', '<%= userId %>'); //Preencher com o userId da sessão
-
+            formData.append('user_id', '<%= userId %>'); 
             fetch('/post-art', {
                 method: 'POST',
                 body: formData

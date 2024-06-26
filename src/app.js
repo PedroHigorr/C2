@@ -1,4 +1,4 @@
-const port = 3003;
+const port = 3006;
 const path = require('path');
 const express = require('express');
 const multer = require('multer');
@@ -33,7 +33,8 @@ const storage = multer.diskStorage({
         cb(null, uploadDir);
     },
     filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname));
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        cb(null, uniqueSuffix + path.extname(file.originalname));
     }
 });
 
@@ -79,13 +80,13 @@ app.post('/post-art', isAuthenticated, upload.single('imagem'), async (req, res)
     const { nome_obra, dimensao, descricao, categoria, estilo, tema, data_criacao, preco} = req.body;
     const user_id = req.session.userId; 
 
-    const caminho_imagem = req.file.path;
+    const caminho_imagem = req.file.filename; // Nome do arquivo gerado pelo multer
 
     try {
         await knex('arts').insert({
             user_id,
             nome_obra,
-            caminho_imagem,
+            caminho_imagem: `/uploads/${caminho_imagem}`, // Caminho relativo para o arquivo
             dimensao,
             descricao,
             categoria,
@@ -114,6 +115,28 @@ app.get('/login', (req, res) => {
 app.get('/', isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, '../', 'public', 'index.html'));
 });
+
+//Rota para receber dados da obra
+app.get('/art/:id', async (req, res) => {
+    const artId = req.params.id;
+
+    try {
+        const art = await knex('arts')
+            .join('users', 'arts.user_id', 'users.id')
+            .select('arts.*', 'users.nome as artist_name')
+            .where('arts.id', artId)
+            .first();
+
+        if (art) {
+            res.status(200).json(art);
+        } else {
+            res.status(404).json({ mensagem: 'Obra não encontrada.' });
+        }
+    } catch (err) {
+        res.status(500).json({ mensagem: `${err}` });
+    }
+});
+
 
 app.listen(port, () => {
     console.log(`Servidor executando na porta ${port}`);

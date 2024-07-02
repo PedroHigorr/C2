@@ -85,10 +85,11 @@
                 height: 50px;
             }
     
-            #cad:hover, #ent:hover{
+            #cad:hover, #ent:hover, #cadwrok:hover{
                 color: #B4A2A4;
             }
 
+          
         }
     
     }
@@ -339,14 +340,16 @@
     }
 
     #send {
-        width: 120px;
-        height: 40px;
-        background-color: #302D2E;
-        align-items: center;  
-        justify-content: center; 
-        border-radius: 10px; 
-    }
+        padding-left: 40px;
+        text-decoration: none;
+        border: none;
+        background-color: transparent;
 
+    }
+       
+         
+
+    
 
     #selectFile p {
         height: 20px;

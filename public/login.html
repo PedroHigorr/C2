@@ -3,11 +3,11 @@
  
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">localhost
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/buttons.css">
-    <title>Document</title>
+    <title>Login</title>
     <style>
         header nav {
             justify-content: center;
@@ -35,14 +35,19 @@
     <main>
         
         <form class="container" id="login-form">
+            <div class="input-field">
+                <input required="" type="email" name="email" id="email">
+                <label for="email">Email</label>
+            </div>
+
             
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email">
+            <div class="input-field" id="pass">               
+                <input required="" type="password" id="senha" name="senha">         
+                <!-- <i class="bi bi-eye-fill" id="btn-pass" onclick="showPass()"> </i>  -->
+                <label for="senha">Senha</label> 
+            </div>   
                 
-            <label for="senha">Senha:</label>
-            <div id="pass">               
-            <input type="password" id="senha" name="senha">         
-            <i class="bi bi-eye-fill" id="btn-pass" onclick="showPass()"> </i>                                       
+                                   
             <div id="remember">
                 
             <input type="checkbox">

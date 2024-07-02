@@ -1,4 +1,4 @@
-const port = 3006;
+const port = 3009;
 const path = require('path');
 const express = require('express');
 const multer = require('multer');
@@ -44,7 +44,7 @@ const upload = multer({ storage });
 app.post('/register', async (req, res) => {
     try {
         await knex('users').insert(req.body);
-        res.status(201).json({ mensagem: 'Usuário cadastrado com sucesso!' });
+        res.status(201).json({ mensagem: 'Usuário cadastrado com sucesso!'});
     } catch (err) {
         res.status(500).json({ mensagem: `${err}` });
     }
@@ -132,6 +132,16 @@ app.get('/art/:id', async (req, res) => {
         } else {
             res.status(404).json({ mensagem: 'Obra não encontrada.' });
         }
+    } catch (err) {
+        res.status(500).json({ mensagem: `${err}` });
+    }
+});
+
+// Rota para obter todas as obras
+app.get('/arts', async (req, res) => {
+    try {
+        const arts = await knex('arts').select('*');
+        res.status(200).json(arts);
     } catch (err) {
         res.status(500).json({ mensagem: `${err}` });
     }

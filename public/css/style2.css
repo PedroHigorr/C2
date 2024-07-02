@@ -723,7 +723,7 @@ main main h1{
 
 .frame img {
     width: 100%;
-    height: auto; /* Deixa a altura automática para manter a proporção */
+    height: 85%; /* Deixa a altura automática para manter a proporção */
     border: 1px solid #ccc; /* Adiciona a borda */
     border-radius: 7px; /* Adiciona a borda arredondada */
     object-fit: cover;

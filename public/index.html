@@ -15,6 +15,9 @@ Tela do artista;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/scriptCA.js"></script>
     <title>Calafate</title>  
 </head>
 <body>
@@ -31,8 +34,10 @@ Tela do artista;
         
          <div id="perfil">
              <div id="enter" class="cad-enter"></div>
+             <a id="cadwrok" href="registerWork.html" class="cad-enter">Cadastrar_obra/</a>
              <a id="ent" href="login.html" class="cad-enter">Entrar/</a>
              <a id="cad" href="register.html" class="cad-enter">Cadastrar</a>
+             
              <img src="img/perfil-logo.svg" alt="Profile Icon">
          </div>
         
@@ -49,7 +54,7 @@ Tela do artista;
                  <a href="artesDigitais.html"> Artes Digitais</a>
                  <a href="colagens.html"> Colagens</a>
                  <a href="textos.html"> Artes Têxtil</a>
-                 <a href="design.html"> Design</a>
+                 <a href="design.html"> </a>
              </nav>
          </footer>
  
@@ -74,70 +79,113 @@ Tela do artista;
         <main>
 
             <div class="gallery-container">
-                <h1>OBRAS EM PROMOÇÃO</h1>
+                <h1>OBRAS EM DESTAQUE</h1>
                 <button class="arrow left-arrow" onclick="prevSlide()" disabled>&#10094;</button>
                 <div class="gallery">
-                    <!-- estrutura da foto-->
+                    <!-- Estrutura da foto -->
                     <div class="frame">
-                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 1">
-                        <div class="favorite-icon">❤️</div>
-                        <div class="info">
-                            <p class="name">Nome da Obra</p>
-                            <p class="price">R$ Valor</p>                            
-                        </div>
+                        <a href="work.html?id=1">
+                            <img src="/uploads/1719436328799-805548163.jpg" alt="Imagem 1">
+                            <div class="favorite-icon">❤️</div>
+                            <div class="info">
+                                <p class="name">True Warrior</p>
+                                <p class="price">R$ 1.00</p>                            
+                            </div>
+                        </a>
                     </div>
-                    <!-- Repita a estrutura acima para cada imagem -->
+                    <!-- Estrutura para repetição e criação de mais cards -->
                     <div class="frame">
-                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
-                        <div class="favorite-icon">❤️</div>
-                        <div class="info">
-                            <p class="name">Nome da Obra</p>
-                            <p class="price">R$ Valor</p>                            
-                        </div>
+                        <a href="work.html?id=2">
+                            <img src="/uploads/1719436444100-900628352.jpg" alt="Imagem 1">
+                            <div class="favorite-icon">❤️</div>
+                            <div class="info">
+                                <p class="name">Thief</p>
+                                <p class="price">R$ 50.00</p>                            
+                            </div>
+                        </a>
                     </div>
+
                     <div class="frame">
-                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 3">
-                        <div class="favorite-icon">❤️</div>
-                        <div class="info">
-                            <p class="name">Nome da Obra</p>
-                            <p class="price">R$ Valor</p>                            
-                        </div>
+                        <a href="work.html?id=3">
+                            <img src="/uploads/1719436504364-765417350.jpg" alt="Imagem 1">
+                            <div class="favorite-icon">❤️</div>
+                            <div class="info">
+                                <p class="name">The hill</p>
+                                <p class="price">R$ 100.00</p>                            
+                            </div>
+                        </a>
                     </div>
+
                     <div class="frame">
-                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
-                        <div class="favorite-icon">❤️</div>
-                        <div class="info">
-                            <p class="name">Nome da Obra</p>
-                            <p class="price">R$ Valor</p>                            
-                        </div>
+                        <a href="work.html?id=4">
+                            <img src="/uploads/1719436582028-705465509.jpg" alt="Imagem 1">
+                            <div class="favorite-icon">❤️</div>
+                            <div class="info">
+                                <p class="name">Sócrates</p>
+                                <p class="price">R$ 200.00</p>                            
+                            </div>
+                        </a>
                     </div>
+                    
                     <div class="frame">
-                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 3">
-                        <div class="favorite-icon">❤️</div>
-                        <div class="info">
-                            <p class="name">Nome da Obra</p>
-                            <p class="price">R$ Valor</p>                           
-                        </div>
-                    </div><div class="frame">
-                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
-                        <div class="favorite-icon">❤️</div>
-                        <div class="info">
-                            <p class="name">Nome da Obra</p>
-                            <p class="price">R$ Valor</p>                            
-                        </div>
+                        <a href="work.html?id=5">
+                            <img src="/uploads/1719436687909-197297037.jpg" alt="Imagem 2">
+                            <div class="favorite-icon">❤️</div>
+                            <div class="info">
+                                <p class="name">Death arm</p>
+                                <p class="price">R$ 350.00</p>                            
+                            </div>
+                        </a>
                     </div>
+
                     <div class="frame">
-                        <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 3">
-                        <div class="favorite-icon">❤️</div>
-                        <div class="info">
-                            <p class="name">Nome da Obra</p>
-                            <p class="price">R$ Valor</p>                         
-                        </div>
+                        <a href="work.html?id=6">
+                            <img src="/uploads/1719436753380-752872954.jpg" alt="Imagem 3">
+                            <div class="favorite-icon">❤️</div>
+                            <div class="info">
+                                <p class="name">Napoleao</p>
+                                <p class="price">2000.00</p>                            
+                            </div>
+                        </a>
                     </div>
+
+                    <div class="frame">
+                        <a href="work.html?id=7">
+                            <img src="/uploads/1719437584676-644175279.jpg" alt="Imagem 1">
+                            <div class="favorite-icon">❤️</div>
+                            <div class="info">
+                                <p class="name">horses of men</p>
+                                <p class="price">R$ 500.00</p>                            
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="frame">
+                        <a href="work.html?id=8">
+                            <img src="/uploads/1719437676256-719289231.jpg" alt="Imagem 1">
+                            <div class="favorite-icon">❤️</div>
+                            <div class="info">
+                                <p class="name">Cold</p>
+                                <p class="price">R$ 500.00</p>                            
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="frame">
+                        <a href="work.html?id=11">
+                            <img src="/uploads/1719438112923-833336547.jpg" alt="Imagem 1">
+                            <div class="favorite-icon">❤️</div>
+                            <div class="info">
+                                <p class="name">red</p>
+                                <p class="price">R$ 500.00</p>                            
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
                 <button class="arrow right-arrow" onclick="nextSlide()">&#10095;</button>
             </div>
-        </main>
+         </main>
 
         <footer>
 
@@ -154,7 +202,7 @@ Tela do artista;
                             <p class="price">R$ Valor</p>                             
                         </div>
                     </div>
-                    <!-- Repita a estrutura acima para cada imagem -->
+                    <!-- Estrutura para repetição e criação de mais cards -->
                     <div class="frame2">
                         <img src="https://i.pinimg.com/736x/c9/36/79/c93679a81553169071f6218e655692b8.jpg" alt="Imagem 2">
                         <div class="favorite-icon2">❤️</div>
@@ -289,7 +337,7 @@ Tela do artista;
      </main>
 
      <footer>
-
+        
      </footer>
 
      

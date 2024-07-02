@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function prevSlide3() {
         showSlide3(currentIndex3 - 1);
     }
+    
 
     nextButton3.addEventListener('click', nextSlide3);
     prevButton3.addEventListener('click', prevSlide3);

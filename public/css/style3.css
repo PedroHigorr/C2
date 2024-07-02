@@ -55,6 +55,7 @@ header footer nav{
             color: #fff;
             height: 20px;
         }
+
     
         #paints{
             margin-left: 30px;
@@ -233,6 +234,7 @@ header footer nav {
     margin-top: 5px;
 }
 
+
 #body-footer {
     background-color: #302d2e;
     color: #fff;
@@ -242,6 +244,8 @@ header footer nav {
     align-items: center;
     padding: 20px;
     width: 100%;
+
+   
 
     #footer-about {
         display: flex;
